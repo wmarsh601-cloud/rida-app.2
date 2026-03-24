@@ -62,15 +62,5 @@
       "source": "/api/health",
       "destination": "/api/health"
     }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/cleanup-sessions",
-      "schedule": "0 */6 * * *"
-    },
-    {
-      "path": "/api/cron/update-demand",
-      "schedule": "*/5 * * * *"
-    }
   ]
 }
