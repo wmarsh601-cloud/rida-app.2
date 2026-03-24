@@ -5,7 +5,7 @@
   "installCommand": "npm install",
   "devCommand": "npm run dev",
   "outputDirectory": ".next",
-  "regions": ["iad1", "sfo1", "gru1"],
+
   "functions": {
     "src/app/api/**/*": {
       "maxDuration": 30
@@ -17,6 +17,7 @@
       "maxDuration": 10
     }
   },
+
   "headers": [
     {
       "source": "/api/(.*)",
@@ -57,6 +58,7 @@
       ]
     }
   ],
+
   "rewrites": [
     {
       "source": "/api/health",
