@@ -1,22 +1,21 @@
-const handleRide = async () => {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ride`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        pickup,
-        destination,
-      }),
-    });
+export default function Home() {
+  return (
+    <main style={{ padding: 20 }}>
+      <h1>🚗 RIDA APP</h1>
 
-    const data = await res.json();
-    console.log(data);
+      <input
+        placeholder="Punto de recogida"
+        style={{ display: "block", marginBottom: 10, width: "100%" }}
+      />
 
-    alert("🚗 Viaje solicitado!");
-  } catch (err) {
-    console.error(err);
-    alert("Error al pedir viaje");
-  }
-};
+      <input
+        placeholder="Destino"
+        style={{ display: "block", marginBottom: 10, width: "100%" }}
+      />
+
+      <button style={{ width: "100%" }}>
+        Pedir viaje 🚀
+      </button>
+    </main>
+  );
+}
